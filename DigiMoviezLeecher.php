@@ -13,10 +13,10 @@ if(isset($_REQUEST['page_url']))// GetPageID
     preg_match('/"page_id":"(.*?)"/', $GetSource, $matches);
     $MovieID =  $matches[1];
 
-    $Usernamme = explode(":" , Account)[0];
+    $Username = explode(":" , Account)[0];
     $Password = explode(":" , Account)[1];
 
-    f_DigiMoviezLeecher($MovieID,$Usernamme,$Password);
+    f_DigiMoviezLeecher($MovieID,$Username,$Password);
 }
 
 #--------- GetPageID ---------#

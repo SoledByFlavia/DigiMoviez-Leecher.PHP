@@ -58,7 +58,7 @@ function f_DigiMoviezLeecher($MovieID , $Username , $Password)
         curl_setopt($REQ_GET_MOVIE, CURLOPT_POSTFIELDS, "{\"movie_id\":\"$MovieID\"}");
         curl_setopt($REQ_GET_MOVIE, CURLOPT_TIMEOUT, 30);
         $AA =  curl_exec($REQ_GET_MOVIE);
-        $RES_MOVIE_JSON = json_decode(curl_exec($REQ_GET_MOVIE) , TRUE);
+        $RES_MOVIE_JSON = json_decode($AA , TRUE);
 
         $MOVIE_TITLE = $RES_MOVIE_JSON['movie_info']['title_en'];
         $MOVIE_POSTER = $RES_MOVIE_JSON['movie_info']['featured_image_url'];
